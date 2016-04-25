@@ -35,5 +35,8 @@
 [self.hostImp clearEditHost];
 ```
 
+# 特性
 
+* host一但被修改，重启启动后，将以修改的host为准。直接改变代码中的host也是如此，不会生效。
+* 如想让代码中指定的host生效，需要调用上面提供的清除host的方法，或者删除应用。
 
