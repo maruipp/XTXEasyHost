@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2T-mT-CiS">
+                                <rect key="frame" x="0.0" y="110" width="600" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bZI-y7-20m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="打开HOST编辑框"/>
+                                <connections>
+                                    <action selector="editHostBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gFt-Cx-xLq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qde-eg-4GV">
+                                <rect key="frame" x="0.0" y="160" width="600" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DGc-X1-yHC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="清除编辑过的HOST"/>
+                                <connections>
+                                    <action selector="clearEditedHostBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zn6-cg-4LV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前host：" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2m-F8-btL">
+                                <rect key="frame" x="0.0" y="43" width="600" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZDd-2j-qwr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T2T-mT-CiS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ACo-83-jiZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Qde-eg-4GV" secondAttribute="trailing" id="IsE-iK-hYQ"/>
+                            <constraint firstItem="Qde-eg-4GV" firstAttribute="top" secondItem="T2T-mT-CiS" secondAttribute="bottom" constant="10" id="IuU-cH-lmH"/>
+                            <constraint firstItem="c2m-F8-btL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KyR-Zn-35h"/>
+                            <constraint firstItem="c2m-F8-btL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="23" id="O5l-VG-Rsv"/>
+                            <constraint firstAttribute="trailing" secondItem="T2T-mT-CiS" secondAttribute="trailing" id="amu-nh-1BK"/>
+                            <constraint firstItem="T2T-mT-CiS" firstAttribute="top" secondItem="c2m-F8-btL" secondAttribute="bottom" constant="27" id="dHW-wC-XwK"/>
+                            <constraint firstItem="Qde-eg-4GV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sLm-jh-bfR"/>
+                            <constraint firstAttribute="trailing" secondItem="c2m-F8-btL" secondAttribute="trailing" id="vbP-b5-it4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hostLabel" destination="c2m-F8-btL" id="zfs-mf-GEd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
